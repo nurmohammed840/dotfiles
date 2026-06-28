@@ -57,6 +57,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.just-perfection
     nh # Nix cli helper
     google-chrome
   ];

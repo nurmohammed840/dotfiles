@@ -12,9 +12,10 @@
     stateVersion = "26.05";
   };
   home.packages = with pkgs; [
-    gnomeExtensions.just-perfection
     vscode
+    mdbook
     discord
+    obs-studio
   ];
 
   programs.home-manager.enable = true;

@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    rustup
     cargo-nextest
+    rustup
     sccache
     mold
     clang
