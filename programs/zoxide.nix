@@ -1,8 +1,8 @@
 { pkgs, lib, ... }:
 
 let
-  zoxideInit = pkgs.writeText "zoxide.nu" ''
-    ${pkgs.zoxide}/bin/zoxide init nushell
+  zoxideInit = pkgs.runCommand "zoxide.nu" {} ''
+    ${pkgs.zoxide}/bin/zoxide init nushell > $out
   '';
 in
 {
