@@ -13,7 +13,7 @@
   };
   home.packages = with pkgs; [
     gnomeExtensions.just-perfection
-    vscode.fhs
+    vscode
     discord
   ];
 
