@@ -6,10 +6,13 @@ let
   '';
 in
 {
-  home.packages = [
-    pkgs.zoxide
-  ];
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 
+  # Remove this when `programs.zoxide.enableNushellIntegration` is available.
+  # See: https://search.nixos.org/options?channel=unstable&query=zoxide
   programs.nushell.extraConfig = lib.mkAfter ''
     source ${zoxideInit}
   '';
