@@ -4,6 +4,8 @@
   imports = [
     ./dev/utils.nix
     ./dev/rust.nix
+
+    ./programs/zoxide.nix
   ];
 
   home = {
