@@ -4,7 +4,9 @@
   imports = [ 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./desktop/gnome.nix
+    
+    # ./desktop/gnome.nix
+    ./desktop/niri.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

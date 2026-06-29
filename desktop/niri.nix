@@ -1,17 +1,19 @@
 { pkgs, ... }:
 
 {
-  services = {
-    displayManager = {
-      dms-greeter.enable = true;
-      autoLogin = {
-        enable = true;
-        user = "nur";
-      };
+  services.greetd = {
+    enable = true;
+    settings.initial_session = {
+      user = "nur";
+      command = "niri-session";
+    };
+    settings.default_session = {
+      user = "nur";
+      command = "niri-session";
     };
   };
-
-  # programs.xwayland.enable = true;
+  
+  programs.xwayland.enable = true;
 
   programs.niri = {
     enable = true;
