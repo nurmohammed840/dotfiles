@@ -1,8 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ 
@@ -55,14 +51,8 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-    gnomeExtensions.just-perfection
-    nh # Nix cli helper
-    google-chrome
-  ];
+  environment.systemPackages = with pkgs; [];
 
-  programs.firefox.enable = true;
   programs.steam.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -74,17 +64,6 @@
   # };
 
   services = {
-    # Enable the Gnome system.
-    xserver.enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager = {
-      gdm.enable = true;
-      autoLogin = {
-        enable = true;
-        user = "nur";
-      };
-    };
-    
     # List services that you want to enable:
 
     # Enable the OpenSSH daemon.

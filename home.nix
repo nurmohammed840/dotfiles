@@ -18,9 +18,11 @@
     mdbook
     discord
     obs-studio
+    nh # Nix cli helper
+    google-chrome
   ];
 
-  programs.home-manager.enable = true;
+  programs.firefox.enable = true;
 
   programs.git = {
     enable = true;
