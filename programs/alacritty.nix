@@ -3,8 +3,10 @@
     enable = true;
 
     settings = {
+      colors = {
+        primary.background = "#000000";
+      };
       keyboard.bindings = [
-        # { mods = "Control"; key = "C"; action = "Copy"; }
         { mods = "Control"; key = "V"; action = "Paste"; }
 
         # See: https://github.com/alacritty/alacritty/issues/474#issuecomment-338803299
