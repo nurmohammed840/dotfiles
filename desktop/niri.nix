@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  services.xserver.enable = true;
+  # programs.xwayland.enable = true;
+
   services.greetd = {
     enable = true;
     settings.initial_session = {
@@ -13,7 +16,6 @@
     };
   };
   
-  programs.xwayland.enable = true;
 
   programs.niri = {
     enable = true;
