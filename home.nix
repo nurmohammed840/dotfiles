@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -14,16 +14,15 @@
     stateVersion = "26.05";
   };
   home.packages = with pkgs; [
+    nh # Nix cli helper
     vscode
     mdbook
     discord
     obs-studio
-    nh # Nix cli helper
     google-chrome
+    firefox
     alacritty
   ];
-
-  programs.firefox.enable = true;
 
   programs.git = {
     enable = true;
