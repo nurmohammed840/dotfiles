@@ -7,6 +7,7 @@
     ./desktop/gnome.nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader = {
     # Use the systemd-boot EFI boot loader.
     systemd-boot.enable = true;
