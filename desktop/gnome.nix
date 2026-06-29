@@ -18,6 +18,11 @@
   ];
 
   environment.gnome.excludePackages = with pkgs; [
-    gnome-terminal
+    yelp
+    gnome-tour
+    epiphany
+    gnome-console
+    simple-scan
+    gnome-connections
   ];
 }
