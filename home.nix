@@ -20,6 +20,7 @@
     obs-studio
     nh # Nix cli helper
     google-chrome
+    alacritty
   ];
 
   programs.firefox.enable = true;

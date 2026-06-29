@@ -16,4 +16,8 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.just-perfection
   ];
+
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-terminal
+  ];
 }
