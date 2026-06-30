@@ -5,7 +5,9 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     
-    ./desktop/gnome.nix
+    ./desktop/cosmic.nix
+
+    # ./desktop/gnome.nix
     # ./desktop/niri.nix
   ];
 
