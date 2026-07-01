@@ -13,6 +13,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    cosmic-monitor
+  ];
+
   environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
   environment.cosmic.excludePackages = with pkgs; [
     cosmic-term
