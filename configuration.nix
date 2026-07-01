@@ -7,8 +7,8 @@
     
     ./desktop/cosmic.nix
 
-    # ./desktop/gnome.nix
     # ./desktop/niri.nix
+    # ./desktop/gnome.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -68,6 +68,18 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  
+  fileSystems."/media/hdd" = {
+    # Run `lsblk -f` to get disk info
+    device = "/dev/disk/by-uuid/6A4E47214E46E583";
+    fsType = "ntfs3";
+    options = [
+      # belong to; run `id` to get user id
+      "uid=1000" "gid=100"
+      "umask=000" # everyone can access
+      "nofail"
+    ];
+  };
 
   services = {
     # List services that you want to enable:
