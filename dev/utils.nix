@@ -7,5 +7,6 @@
     bottom    # TUI system monitor
     fd        # alternative to `find`
     ripgrep   # search inside files
+    fastfetch # View system info
   ];
 }
