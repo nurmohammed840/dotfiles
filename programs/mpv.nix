@@ -2,29 +2,16 @@
 { pkgs, ... }:
 
 {
+  # See: https://wiki.nixos.org/wiki/MPV
   programs.mpv = {
     enable = true;
 
-    package = (
-      pkgs.mpv-unwrapped.wrapper {
-        scripts = with pkgs.mpvScripts; [
-          uosc
-          sponsorblock
-          thumbfast
-          mpris
-        ];
-
-        mpv = pkgs.mpv-unwrapped.override {
-          waylandSupport = true;
-        };
-      }
-
-      pkgs.mpv.override {
-        mpv-unwrapped = pkgs.mpv-unwrapped.override {
-          ffmpeg = pkgs.ffmpeg-full;
-        };
-      }
-    );
+    # https://github.com/topics/mpv-script
+    scripts = with pkgs.mpvScripts; [
+      modernz
+      sponsorblock
+      thumbfast
+    ];
 
     config = {
       profile = "high-quality";
