@@ -10,6 +10,8 @@
     ./programs/alacritty.nix
 
     ./programs/git.nix
+    
+    ./programs/mpv.nix
   ];
 
   home = {
