@@ -1,38 +1,21 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    # Wayland
-    wayland
-    wayland-protocols
-    libxkbcommon
+  programs.nix-ld = {
+    enable = true;
 
-    # X11 (optional)
-    # xorg.libX11
-    # xorg.libXcursor
-    # xorg.libXi
-    # xorg.libXrandr
-    # xorg.libXinerama
-    # xorg.libXext
+    libraries = with pkgs; [
+      libxkbcommon
 
-    # Graphics
-    vulkan-loader
-    mesa
-  ];
+      # GPU backend
+      vulkan-loader
+      mesa
 
-  home.sessionVariables = {
-    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
-      pkgs.wayland
-      pkgs.libxkbcommon
-      pkgs.vulkan-loader
-      pkgs.mesa
-
-      # pkgs.xorg.libX11
-      # pkgs.xorg.libXcursor
-      # pkgs.xorg.libXi
-      # pkgs.xorg.libXrandr
-      # pkgs.xorg.libXinerama
-      # pkgs.xorg.libXext
+      # Window system
+      wayland
+      # xorg.libX11
+      # xorg.libXcursor
+      # xorg.libXi
     ];
   };
 }
