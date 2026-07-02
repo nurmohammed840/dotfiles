@@ -10,11 +10,11 @@
   ];
 
   home.file.".cargo/config.toml".text = ''
-    [build]
-    rustc-wrapper = "sccache"
+    # [build]
+    # rustc-wrapper = "sccache"
 
-    [profile.dev.package."*"]
-    opt-level = 3
+    # [profile.dev.package."*"]
+    # opt-level = 3
 
     [target.x86_64-unknown-linux-gnu]
     linker = "clang"
