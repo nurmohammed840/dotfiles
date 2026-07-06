@@ -6,7 +6,6 @@
     ./hardware-configuration.nix
     
     ./desktop/cosmic.nix
-    ./dev/wgpu.nix
 
     # ./desktop/niri.nix
     # ./desktop/gnome.nix
