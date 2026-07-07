@@ -4,6 +4,7 @@
   imports = [
     ./dev/utils.nix
     ./dev/rust.nix
+    ./dev/wgpu.nix
 
     ./programs/zoxide.nix
     ./programs/nushell.nix
