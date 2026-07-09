@@ -8,5 +8,6 @@
     fd        # alternative to `find`
     ripgrep   # search inside files
     fastfetch # View system info
+    deno      # JavaScript and TypeScript runtime
   ];
 }
