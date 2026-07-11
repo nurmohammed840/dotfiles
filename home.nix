@@ -27,5 +27,6 @@
     obs-studio
     google-chrome
     firefox
+    qbittorrent
   ];
 }

@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     cargo-nextest
+    cargo-wizard
+    cargo-generate
     rustup
     sccache
     mold
