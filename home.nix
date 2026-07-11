@@ -4,7 +4,6 @@
   imports = [
     ./dev/utils.nix
     ./dev/rust.nix
-    ./dev/flutter.nix
 
     ./programs/zoxide.nix
     ./programs/nushell.nix

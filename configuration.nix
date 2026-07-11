@@ -6,9 +6,10 @@
     ./hardware-configuration.nix
     
     ./desktop/cosmic.nix
-
     # ./desktop/niri.nix
     # ./desktop/gnome.nix
+
+    ./dev/flutter.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -143,9 +144,17 @@
       "nix-command"
       "flakes"
     ];
+    max-jobs = "auto";
+    http-connections = 64;
+    max-substitution-jobs = 64;
     fallback = false;
     auto-optimise-store = true;
     substituters = [
+      "https://mirror.sjtu.edu.cn/nix-channels/store"
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
+
+      "https://cache.nixos.org"
       "https://nix-community.cachix.org"
     ];
     trusted-public-keys = [
