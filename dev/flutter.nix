@@ -1,10 +1,12 @@
 { pkgs, ... }:
 
 let
-  buildToolsVersion = "34.0.0";
+  buildToolsVersion = "28.0.3";
   androidComposition = pkgs.androidenv.composeAndroidPackages {
     buildToolsVersions = [ buildToolsVersion ];
-    platformVersions = [ "34" ];
+    platformVersions = [ "36" ];
+
+    # includeCmdlineTools = true;
 
     includeEmulator = false;
     includeSystemImages = false;
@@ -21,8 +23,14 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
+    mesa-demos
     flutter
     android-tools
     androidSdk
   ];
+
+  environment.variables = {
+    ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
+    ANDROID_HOME = "${androidSdk}/libexec/android-sdk";
+  };
 }
