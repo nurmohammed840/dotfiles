@@ -18,10 +18,10 @@
     bindings = {
       UP = "add volume 5";
       DOWN = "add volume -5";
-      # LEFT = "seek -5";
-      # RIGHT = "seek 5"
+      LEFT = "seek -5";
+      RIGHT = "seek 5";
     };
-        
+
     scriptOpts = {
       modernz = {
         layout = "mini";
@@ -40,6 +40,5 @@
 
     profile=high-quality
     ytdl-format=bestvideo+bestaudio
-    cache-default=4000000
   '';
 }
