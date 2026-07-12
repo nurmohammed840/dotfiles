@@ -1,10 +1,9 @@
 { pkgs, ... }:
 
 let
-  buildToolsVersion = "28.0.3";
   androidEnv = pkgs.androidenv.override { licenseAccepted = true; };
-  androidComposition = pkgs.androidenv.composeAndroidPackages {
-    buildToolsVersions = [ buildToolsVersion ];
+  androidComposition = androidEnv.composeAndroidPackages {
+    buildToolsVersions = [ "28.0.3" ];
     platformVersions = [ "36" ];
 
     includeEmulator = false;
