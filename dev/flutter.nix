@@ -2,16 +2,17 @@
 
 let
   buildToolsVersion = "28.0.3";
+  androidEnv = pkgs.androidenv.override { licenseAccepted = true; };
   androidComposition = pkgs.androidenv.composeAndroidPackages {
     buildToolsVersions = [ buildToolsVersion ];
     platformVersions = [ "36" ];
 
-    # includeCmdlineTools = true;
-
     includeEmulator = false;
+    includeNDK = false;
     includeSystemImages = false;
     includeSources = false;
     useGoogleAPIs = false;
+    # includeCmdlineTools = false;
   };
   androidSdk = androidComposition.androidsdk;
 in {
