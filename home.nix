@@ -4,13 +4,14 @@
   imports = [
     ./dev/utils.nix
     ./dev/rust.nix
+    ./dev/typescript.nix
 
     ./programs/zoxide.nix
     ./programs/nushell.nix
     ./programs/alacritty.nix
 
     ./programs/git.nix
-    
+
     ./programs/mpv.nix
   ];
 
