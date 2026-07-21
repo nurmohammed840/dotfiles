@@ -1,17 +1,24 @@
 { pkgs, ... }:
 
 let
+  android = {
+    platform = "36";
+    buildTools = "35.0.0";
+  };
   androidEnv = pkgs.androidenv.override { licenseAccepted = true; };
   androidComposition = androidEnv.composeAndroidPackages {
-    buildToolsVersions = [ "28.0.3" ];
-    platformVersions = [ "36" ];
+    platformVersions = [ android.platform ];
+    buildToolsVersions = [ android.buildTools ];
+
+    # ndkVersions = [ "29.0.14206865" ];
+    includeNDK = true;
+    includeCmake = true;
+    cmakeVersions = [ "3.22.1" ];
 
     includeEmulator = false;
-    includeNDK = false;
     includeSystemImages = false;
     includeSources = false;
     useGoogleAPIs = false;
-    # includeCmdlineTools = false;
   };
   androidSdk = androidComposition.androidsdk;
 in {
@@ -32,5 +39,6 @@ in {
   environment.variables = {
     ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
     ANDROID_HOME = "${androidSdk}/libexec/android-sdk";
+    GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/${android.buildTools}/aapt2";
   };
 }

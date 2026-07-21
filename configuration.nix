@@ -10,6 +10,8 @@
     # ./desktop/gnome.nix
 
     ./dev/flutter.nix
+
+    ./programs/wireshark.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
