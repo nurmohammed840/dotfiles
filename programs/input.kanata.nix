@@ -32,8 +32,8 @@
 
           ;; Positional mapping:
           (deflayer default
-            M-up    ;; Forward  -> Win + Up
-            M-down  ;; Back     -> Win + Down
+            M-C-up    ;; Forward -> Super + Ctrl + Up
+            M-C-down  ;; Back    -> Super + Ctrl + Down
           )
         '';
       };
