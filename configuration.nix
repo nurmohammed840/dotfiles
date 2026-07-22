@@ -11,7 +11,7 @@
 
     ./dev/flutter.nix
 
-    ./programs/wireshark.nix        # need `wireshark` extraGroups
+    ./programs/wireshark.nix
     ./programs/input.kanata.nix
   ];
 
@@ -56,7 +56,6 @@
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "networkmanager"
-      "wireshark"
     ];
   };
 
