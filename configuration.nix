@@ -12,7 +12,7 @@
     ./dev/flutter.nix
 
     ./programs/wireshark.nix        # need `wireshark` extraGroups
-    ./programs/input-remapper.nix   # need `input` extraGroups
+    ./programs/input.kanata.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -57,7 +57,6 @@
       "wheel" # Enable ‘sudo’ for the user.
       "networkmanager"
       "wireshark"
-      "input"
     ];
   };
 
