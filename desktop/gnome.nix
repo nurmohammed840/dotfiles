@@ -17,6 +17,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    nautilus                # File manager
+    gnome-calculator    
+    gnome-system-monitor
     gnomeExtensions.just-perfection
   ];
 

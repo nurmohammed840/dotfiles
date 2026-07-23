@@ -32,8 +32,8 @@
 
           ;; Positional mapping:
           (deflayer default
-            C-A-left     ;; Forward
-            C-A-right    ;; Back
+            A-tab       ;; Forward
+            C-A-right   ;; Back
           )
         '';
       };
