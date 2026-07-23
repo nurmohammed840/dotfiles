@@ -5,9 +5,9 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     
-    ./desktop/cosmic.nix
+    # ./desktop/cosmic.nix
+    ./desktop/gnome.nix
     # ./desktop/niri.nix
-    # ./desktop/gnome.nix
 
     ./dev/flutter.nix
 

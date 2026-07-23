@@ -11,6 +11,7 @@
       };
     };
 
+    gnome.core-apps.enable = false;
     gnome.core-developer-tools.enable = false;
     gnome.games.enable = false;
   };
@@ -23,9 +24,14 @@
     yelp
     gnome-user-docs
     gnome-tour
-    epiphany
-    gnome-console
-    simple-scan
-    gnome-connections
+    
+    decibels          # Audio Player
+    gnome-music       # Music Player
+    showtime          # Video Player 
+    gnome-console     # Terminal
+
+    epiphany          # Web browser
+    simple-scan       # Docs Scanner
+    gnome-connections # Remote Desktop 
   ];
 }
