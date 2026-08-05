@@ -15,6 +15,7 @@
       "mouseWorkspaceSwitcher" = {
         # Use `ls /dev/input/by-path/` to find your keyboard or mouse devices.
         devices = [
+          "/dev/input/by-path/pci-0000:01:00.0-usb-0:4:1.0-event-kbd"
           "/dev/input/by-path/pci-0000:05:00.4-usb-0:2:1.0-event-mouse"
         ];
 
@@ -26,14 +27,26 @@
         config = ''
           ;; Define the physical source keys Kanata will listen to
           (defsrc
+            pause
             mfwd  ;; Physical "Forward" side button (Mouse 5)
             mbck  ;; Physical "Back" side button (Mouse 4)
           )
 
-          ;; Positional mapping:
-          (deflayer default
+          (defalias
+            work (layer-switch work)
+            game (layer-switch gaming)
+          )
+
+          (deflayer work
+            @game
             A-tab       ;; Forward
             C-A-right   ;; Back
+          )
+
+          (deflayer gaming
+            @work
+            mfwd
+            mbck
           )
         '';
       };

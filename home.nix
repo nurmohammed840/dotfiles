@@ -13,6 +13,8 @@
     ./programs/git.nix
 
     ./programs/mpv.nix
+
+    ./programs/mangohud.nix
   ];
 
   home = {
