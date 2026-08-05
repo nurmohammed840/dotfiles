@@ -5,10 +5,12 @@
     cargo-nextest
     cargo-wizard
     cargo-generate
+    cargo-binstall
     rustup
     sccache
-    mold
     clang
+    wild-unwrapped  # faster then `mold` linker
+    pkgsCross.musl64.stdenv.cc  # MUSL cross toolchain
   ];
 
   home.file.".cargo/config.toml".text = ''
@@ -33,7 +35,7 @@
       # (Nightly) Make the current crate share its generic instantiations
       "-Zshare-generics=y",
       "-Z", "threads=16",
-      "-C", "link-arg=-fuse-ld=mold",
+      "-C", "link-arg=--ld-path=wild",
     ]
   '';
 }
