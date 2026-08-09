@@ -13,9 +13,6 @@
 
     ./programs/wireshark.nix
     ./programs/input.kanata.nix
-
-    # For data extraction from website
-    ./programs/ollama.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
