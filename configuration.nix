@@ -64,6 +64,8 @@
   environment.systemPackages = with pkgs; [];
 
   programs.steam.enable = true;
+  programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -82,6 +84,7 @@
       "uid=1000" "gid=100"
       "umask=000" # everyone can access
       "nofail"
+      "force"
     ];
   };
 
