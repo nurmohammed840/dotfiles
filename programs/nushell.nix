@@ -7,5 +7,16 @@
     shellAliases = {
       nix-pull = "sudo nix flake update --flake /etc/nixos";
     };
+    extraConfig = ''
+      def cargo [...args] {
+        if ($args | is-empty) {
+          ^cargo
+        } else if ($args.0 == "test") {
+          ^cargo nextest run ...($args | skip 1)
+        } else {
+          ^cargo ...$args
+        }
+      }
+    '';
   };
 }
