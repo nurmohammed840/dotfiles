@@ -8,7 +8,7 @@
       nix-pull = "sudo nix flake update --flake /etc/nixos";
     };
     extraConfig = ''
-      def cargo [...args] {
+      def --wrapped c [...args] {
         if ($args | is-empty) {
           ^cargo
         } else if ($args.0 == "test") {
