@@ -1,8 +1,8 @@
 {
   programs.git = {
     enable = true;
-    extraConfig.core.editor = "code --wait";
     settings = {
+      core.editor = "code --wait";
       pull.rebase = true;
       rebase.autoStash = true;
       user = {
