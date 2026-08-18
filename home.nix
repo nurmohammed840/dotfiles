@@ -27,8 +27,8 @@
     vscode
     mdbook
     discord
-    obs-studio
     google-chrome
+    obs-studio
     firefox
     qbittorrent
   ];
