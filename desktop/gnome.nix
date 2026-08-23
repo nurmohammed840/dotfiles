@@ -17,6 +17,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    noto-fonts
     nautilus                # File manager
     gnome-calculator    
     gnome-characters
