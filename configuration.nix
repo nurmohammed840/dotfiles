@@ -9,7 +9,7 @@
     ./desktop/gnome.nix
     # ./desktop/niri.nix
 
-    # ./dev/flutter.nix
+    ./dev/flutter.nix
 
     ./programs/wireshark.nix
     ./programs/input.kanata.nix

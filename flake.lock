@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flutterPkgs": {
+      "locked": {
+        "lastModified": 1787522656,
+        "narHash": "sha256-NMNmig6UyIruJKuVexSqPD29WtqNn2BUGhrB0zWgS4Q=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a12fe021234df2301bc7dae4ada8c904aea3923c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "a12fe02",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -38,6 +54,7 @@
     },
     "root": {
       "inputs": {
+        "flutterPkgs": "flutterPkgs",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
