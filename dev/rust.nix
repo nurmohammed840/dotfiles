@@ -6,7 +6,6 @@
     cargo-wizard
     cargo-generate
     cargo-binstall
-    cargo-seek
     rustup
     sccache
     clang
