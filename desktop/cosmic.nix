@@ -14,11 +14,15 @@
   };
 
   environment.systemPackages = with pkgs; [
-    cosmic-monitor
+    noto-fonts
   ];
 
   environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
   environment.cosmic.excludePackages = with pkgs; [
     cosmic-term
+    cosmic-edit
+    cosmic-reader
+    cosmic-player
+    cosmic-wallpapers
   ];
 }

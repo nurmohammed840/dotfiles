@@ -9,7 +9,8 @@
     rustup
     sccache
     clang
-    wild-unwrapped  # faster then `mold` linker
+    # wild-unwrapped  # linker
+    mold
     pkgsCross.musl64.stdenv.cc  # MUSL cross toolchain
   ];
 
@@ -35,7 +36,7 @@
       # (Nightly) Make the current crate share its generic instantiations
       "-Zshare-generics=y",
       "-Z", "threads=16",
-      "-C", "link-arg=--ld-path=wild",
+      "-C", "link-arg=-fuse-ld=mold",
     ]
   '';
 }
