@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.nushell = {
     enable = true;
@@ -7,6 +9,9 @@
     shellAliases = {
       nix-pull = "sudo nix flake update --flake /etc/nixos";
     };
+    extraEnv = ''
+      $env.PATH = ($env.PATH | prepend "${config.home.homeDirectory}/.cargo/bin")
+    '';
     extraConfig = ''
       def --wrapped c [...args] {
         if ($args | is-empty) {
