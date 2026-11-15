@@ -22,6 +22,12 @@
     homeDirectory = "/home/nur";
     stateVersion = "26.05";
   };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   home.packages = with pkgs; [
     nh # Nix cli helper
     vscode

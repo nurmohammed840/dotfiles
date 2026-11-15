@@ -10,7 +10,7 @@ let
   };
   android = {
     platform = "36";
-    buildTools = "35.0.0";
+    buildTools = "36.0.0";
   };
   androidEnv = pkgs.androidenv.override { licenseAccepted = true; };
   androidComposition = androidEnv.composeAndroidPackages {
