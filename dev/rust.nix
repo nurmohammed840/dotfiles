@@ -35,8 +35,7 @@
     rustflags = [
       # (Nightly) Make the current crate share its generic instantiations
       "-Zshare-generics=y",
-      "-Z", "threads=16",
-      "-Zunstable-options", "--jobs-frontend=4",
+      "-Z", "threads=8",
       "-C", "link-arg=-fuse-ld=mold",
     ]
   '';
